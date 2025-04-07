@@ -1,0 +1,38 @@
+.slider {
+    overflow: hidden;
+}
+
+.slider__nav {
+    margin: 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider__button {
+    display: flex;
+    align-items: center;
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 130%;
+}
+
+.slider__arrow {
+    width: 20px;
+    height: 20px;
+    background-position-y: 4px;
+}
+
+.slider__arrow--left {
+    background-image: url('../../img/arrow.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 5px;
+}
+
+.slider__arrow--right {
+    background-image: url('../../img/arrow.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: rotate(180deg);
+    margin-left: 5px;
+}

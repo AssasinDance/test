@@ -1,0 +1,28 @@
+@import url('reset.css');
+@import url('./fonts/fonts.css');
+@import url('./components/background/background.css');
+@import url('./components/header/header.css');
+@import url('./components/menu/menu.css');
+@import url('./components/title/title.css');
+@import url('./components/slider/slider.css');
+@import url('./components/list-of-cards/list-of-cards.css');
+
+body {
+    font-family: "Actay", sans-serif;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+button {
+    font-family: "Actay", sans-serif;
+    background-color: transparent;
+    color: white;
+    border: none;
+}
