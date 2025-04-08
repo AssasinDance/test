@@ -9,23 +9,33 @@
 <body>
     <div class="background"></div>
     <header class="header">
-        <span class="header__logo">Epc<br />Hunters</span>
+        <span class="header__logo no-select">Epc<br />Hunters</span>
+        <nav class="header__nav">
+          <ul class="header__list">
+            <li class="header__item"><a href="#" class="header__nav-link">Loren ipsum</a></li>
+            <li class="header__item"><a href="#" class="header__nav-link">Loren ipsum</a></li>
+            <li class="header__item"><a href="#" class="header__nav-link">Loren ipsum</a></li>
+        </ul>
+        <a href="#" class="header__link link"><span class="link__text">Loren ipsum</span><div class="link__arrow"></div></a>
+        </nav>
         <button class="header__burger"></button>
     </header>
     <div class="menu">
         <header class="menu__header">
+            <span class="menu__logo">Epc<br />Hunters</span>
             <span class="menu__title">Loren ipsum</span>
             <button class="menu__cross"></button>
         </header>
         <nav class="menu__nav">
             <ul class="menu__list">
-                <li class="menu__item">Loren ipsum</li>
-                <li class="menu__item">Loren ipsum</li>
-                <li class="menu__item">Loren ipsum</li>
+                <li class="menu__item"><a href="#" class="menu__nav-link">Loren ipsum</a></li>
+                <li class="menu__item"><a href="#" class="menu__nav-link">Loren ipsum</a></li>
+                <li class="menu__item"><a href="#" class="menu__nav-link">Loren ipsum</a></li>
             </ul>
             <a href="#" class="menu__link link"><span class="link__text">Loren ipsum</span><div class="link__arrow"></div></a>
         </nav>
     </div>
+    <div class="menu-background invisible"></div>
     <h1 class="title">Loren ipsum</h1>
     <div class="slider">
         <div class="slider__items">
@@ -34,32 +44,39 @@
             <!--slider-list-->
             <ul class="list-of-cards">
               <!--slider-track-->
-              <li class="list-of-cards__item"
-                ><div class="list-of-cards__card-number"><div class="list-of-cards__number">1</div></div><span class="list-of-cards__card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit</span>
+              <li class="list-of-cards__item list-of-cards__item--1"
+                ><div class="list-of-cards__card-number"><div class="list-of-cards__number no-select">1</div></div><span class="list-of-cards__card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit</span>
               </li>
-              <li class="list-of-cards__item"
-                ><div class="list-of-cards__card-number"><div class="list-of-cards__number">2</div></div><span class="list-of-cards__card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit</span>
+              <li class="list-of-cards__item list-of-cards__item--2"
+                ><div class="list-of-cards__card-number"><div class="list-of-cards__number no-select">2</div></div><span class="list-of-cards__card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit</span>
               </li>
-              <li class="list-of-cards__item"
-                ><div class="list-of-cards__card-number"><div class="list-of-cards__number">3</div></div><span class="list-of-cards__card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit</span>
+              <li class="list-of-cards__item list-of-cards__item--3"
+                ><div class="list-of-cards__card-number"><div class="list-of-cards__number no-select">3</div></div><span class="list-of-cards__card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit</span>
               </li>
-              <li class="list-of-cards__item"
-                ><div class="list-of-cards__card-number"><div class="list-of-cards__number">4</div></div><span class="list-of-cards__card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit</span>
+              <li class="list-of-cards__item list-of-cards__item--4"
+                ><div class="list-of-cards__card-number"><div class="list-of-cards__number no-select">4</div></div><span class="list-of-cards__card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit</span>
               </li>
-              <li class="list-of-cards__item"
-                ><div class="list-of-cards__card-number"><div class="list-of-cards__number">5</div></div><span class="list-of-cards__card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit</span>
+              <li class="list-of-cards__item list-of-cards__item--5"
+                ><div class="list-of-cards__card-number"><div class="list-of-cards__number no-select">5</div></div><span class="list-of-cards__card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit</span>
               </li>
-              <li class="list-of-cards__item"
-                ><div class="list-of-cards__card-number"><div class="list-of-cards__number">6</div></div><span class="list-of-cards__card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit</span>
+              <li class="list-of-cards__item list-of-cards__item--6"
+                ><div class="list-of-cards__card-number"><div class="list-of-cards__number no-select">6</div></div><span class="list-of-cards__card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit</span>
               </li>
             </ul>
+            <div class="slider__line12"></div>
+            <div class="slider__line23"></div>
+            <div class="slider__line34"></div>
+            <div class="slider__line45"></div>
+            <div class="slider__line56"></div>
           </div>
         </div>
         <div class="slider__nav">
-            <button class="slider__button slider__button--left"><div class="slider__arrow slider__arrow--left"></div>loren ipsum</button>
+            <button class="slider__button slider__button--left slider__button--inactive"><div class="slider__arrow slider__arrow--left"></div>loren ipsum</button>
             <button class="slider__button slider__button--right">loren ipsum<div class="slider__arrow slider__arrow--right"></div></button>
         </div>    
     </div>
 </body>
-<script src="index.js"></script>
+<script src='./components/header/header.js'></script>
+<script src='./components/menu/menu.js'></script>
+<script src='./components/slider/slider.js'></script>
 </html>

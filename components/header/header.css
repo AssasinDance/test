@@ -6,6 +6,18 @@
     font-weight: 700;
     font-size: 20px;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0) 60%);
+
+    @media (min-width: 1200px) {
+        padding: 40px 70px;
+        justify-content: flex-start;
+        gap: 52px;
+    }
+}
+
+.header__logo {
+    @media (min-width: 1200px) {
+        font-size: 32px;
+    }
 }
 
 .header__burger {
@@ -14,4 +26,38 @@
     background-size: contain;
     height: 25px;
     width: 25px;
+
+    @media (min-width: 1200px) {
+        display: none;
+    }
+}
+
+.header__nav {
+    display: none;
+
+    @media (min-width: 1200px) {
+        display: flex;
+        font-weight: 400;
+        justify-content: space-between;
+        width: 100%;
+        text-transform: capitalize;
+    }
+}
+
+.header__nav-link:hover {
+    text-decoration: underline;
+}
+
+.header__list {
+    @media (min-width: 1200px) {
+        display: flex;
+        gap: 40px;
+    }
+}
+
+.header__link {
+    @media (min-width: 1200px) {
+        font-size: 20px;
+        border-bottom: solid 1px white;
+    }
 }

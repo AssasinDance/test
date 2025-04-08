@@ -1,6 +1,10 @@
 .list-of-cards {
     display: flex;
     gap: 20px;
+
+    @media (min-width: 1200px) {
+        height: calc(100vh - 235px);
+    }
 }
 
 .list-of-cards__item {
@@ -18,9 +22,18 @@
     align-items: center;
     text-align: center;
     gap: 20px;
+
+    @media (min-width: 1200px) {
+        width: 286px;
+        height: 79px;
+        position: absolute;
+        flex-direction: row;
+        gap: 0;
+        backdrop-filter: blur(15px);
+    }
 }
 
-.list-of-cards__item::after {
+.list-of-cards__item::before {
     content: '';
     width: 40px;
     height: 60px;
@@ -29,8 +42,14 @@
     background-repeat: no-repeat;
     position: relative;
     margin: -40px;
-    right: -150px;
-    top: -180px;
+    right: calc(10px - 50vw);
+    top: -12%;
+    z-index: 100;
+
+    @media (min-width: 1200px) {
+        top: -40%;
+        right: calc(-3px - 100%);
+    }
 }
 
 .list-of-cards__card-number {
@@ -43,15 +62,61 @@
     justify-content: center;
     border-radius: 100px;
     border: solid 1px white;
+
+    @media (min-width: 1200px) {
+        width: 51px;
+        height: 51px;
+        margin-left: 30px;
+        font-size: 35px;
+    }
 }
 
 .list-of-cards__number {
     text-shadow: 0 10px 6px rgba(255,255,255,0.15);
+    position: relative;
+    bottom: -3px;
 }
 
 .list-of-cards__card-text {
     font-size: 14px;
     font-weight: 200;
     width: calc(100% - 36px);
+    max-width: 250px;
     line-height: 130%;
+
+    @media (min-width: 1200px) {
+        width: 195px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .list-of-cards__item--1 {
+        top: calc(41vh - 300px);
+        left: 7vw;
+    }
+
+    .list-of-cards__item--2 {
+        top: calc(74vh - 300px);
+        left: 12vw;
+    }
+
+    .list-of-cards__item--3 {
+        top: calc(89vh - 300px);
+        left: 39vw;
+    }
+
+    .list-of-cards__item--4 {
+        top: calc(57vh - 300px);
+        left: 33vw;
+    }
+
+    .list-of-cards__item--5 {
+        top: calc(47vh - 300px);
+        left: 71vw;
+    }
+
+    .list-of-cards__item--6 {
+        top: calc(67vh - 300px);
+        left: 60vw;
+    }
 }

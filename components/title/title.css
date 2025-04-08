@@ -2,4 +2,9 @@
     font-weight: 700;
     font-size: 35px;
     align-self: center;
+    text-transform: capitalize;
+
+    @media (min-width: 1200px) {
+        font-size: 90px;
+    }
 }

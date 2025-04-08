@@ -3,15 +3,15 @@ const slider = (
   sliderListClass,
   sliderTrackClass,
   slidesClass,
-  circleListClass,
   slideWidth
 ) => {
   let slider = document.querySelector(sliderClass), //slider__items
     sliderList = slider.querySelector(sliderListClass), //slider-list
     sliderTrack = slider.querySelector(sliderTrackClass), //list-of-brands
     slides = slider.querySelectorAll(slidesClass), //brand
-    circleList = slider.querySelector(circleListClass), //circle-list
-    stopSliderWidth = 555,
+    leftButton = document.querySelector('.slider__button--left'),
+    rightButton = document.querySelector('.slider__button--right'),
+    stopSliderWidth = 1200,
     slideIndex = 0,
     posInit = 0,
     posX1 = 0,
@@ -142,8 +142,22 @@ const slider = (
       if (allowSwipe) {
         if (Math.abs(posFinal) > posThreshold) {
           if (posInit < posX1) {
+            if (slideIndex === slides.length - 1) {
+              rightButton.classList.toggle('slider__button--inactive')
+            }
+            if (slideIndex === 1) {
+              leftButton.classList.toggle('slider__button--inactive')
+            }
+            
             slideIndex--
           } else if (posInit > posX1) {
+            if (slideIndex === slides.length - 2) {
+              rightButton.classList.toggle('slider__button--inactive')
+            }
+            if (slideIndex === 0) {
+              leftButton.classList.toggle('slider__button--inactive')
+            }
+
             slideIndex++
           }
         }
@@ -151,12 +165,6 @@ const slider = (
         if (posInit !== posX1) {
           allowSwipe = false
           slide()
-          for (let i = 0; i < circleList.children.length; i++) {
-            circleList.children[i].classList.remove('circle-list__item--active')
-          }
-          circleList.children[slideIndex].classList.toggle(
-            'circle-list__item--active'
-          )
         } else {
           allowSwipe = true
         }
@@ -177,7 +185,35 @@ const slider = (
       swipeEnd()
       allowSwipe = true
     }
+  
+  leftButton.addEventListener('click', () => {
+    if (slideIndex === slides.length - 1) {
+      rightButton.classList.toggle('slider__button--inactive')
+    }
+    if (slideIndex === 1) {
+      leftButton.classList.toggle('slider__button--inactive')
+    }
+    if (slideIndex > 0) {
+      slideIndex--
+    }
 
+    slide()
+  })
+
+  rightButton.addEventListener('click', () => {
+    if (slideIndex === slides.length - 2) {
+      rightButton.classList.toggle('slider__button--inactive')
+    }
+    if (slideIndex === 0) {
+      leftButton.classList.toggle('slider__button--inactive')
+    }
+    if (slideIndex < slides.length - 1) {
+      slideIndex++
+    }
+
+    slide()
+  })
+  
   sliderTrack.style.transform = 'translate3d(0px, 0px, 0px)'
 
   sliderList.classList.add('grab')
@@ -195,10 +231,9 @@ const slider = (
 }
 
 slider(
-  '.slider__brands',
+  '.slider__items',
   '.slider-list',
-  '.list-of-brands',
-  '.brand',
-  '.circle-list',
-  window.innerWidth - 50
+  '.list-of-cards',
+  '.list-of-cards__item',
+  window.innerWidth + 20
 )
