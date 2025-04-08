@@ -5,6 +5,10 @@
     @media (min-width: 1200px) {
         height: calc(100vh - 235px);
     }
+
+    @media (min-width: 1920px) {
+        margin-top: -50px;
+    }
 }
 
 .list-of-cards__item {

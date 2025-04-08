@@ -69,9 +69,9 @@
     }
 
     @media (min-width: 1920px) {
-        top: 46vh;
-        height: 350px;
-        width: 330px;
+        top: 41vh;
+        height: 400px;
+        width: 350px;
     }
 }
 
@@ -90,8 +90,9 @@
     @media (min-width: 1920px) {
         background-position: 30% 50%;
         background-size: cover;
-        height: 215px;
-        width: 330px;
+        height: 190px;
+        width: 340px;
+        top: 73vh;
         left: 25vw;
     }
 }
@@ -105,10 +106,13 @@
     }
 
     @media (min-width: 1920px) {
-        height: 390px;
-        width: 350px;
-        left: 36vw;
-        transform: rotate(-20deg);
+        background-position: 100%;
+        background-size: cover;
+        height: 250px;
+        width: 400px;
+        left: 34vw;
+        transform: rotate(-30deg);
+        top: 55vh;
     }
 }
 
@@ -121,10 +125,10 @@
     }
 
     @media (min-width: 1920px) {
-        top: 42.3vh;
-        left: 45.4vw;
+        top: 37vh;
+        left: 44vw;
         height: 350px;
-        width: 560px;
+        width: 630px;
     }
 }
 
@@ -137,8 +141,12 @@
     }
 
     @media (min-width: 1920px) {
-        left: 66vw;
-        height: 350px;
-        width: 430px;
+        background-position: 100%;
+        background-size: cover;
+        transform: rotate(-15deg);
+        top: 41vh;
+        left: 71vw;
+        height: 430px;
+        width: 250px;
     }
 }
